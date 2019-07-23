@@ -1,0 +1,19 @@
+…or create a new repository on the command line
+echo "# my-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/teslo2004/my-app.git
+git push -u origin master
+
+
+or push an existing repository from the command line
+git remote add origin https://github.com/teslo2004/my-app.git
+git push -u origin master
+
+
+git init
+git remote add origin https://github.com/teslo2004/my-app.git
+git pull
+git clean -d -f
+git pull origin master
