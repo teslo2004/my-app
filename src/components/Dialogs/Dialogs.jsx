@@ -2,31 +2,35 @@ import React from 'react';
 import classes from './Dialogs.module.css';
 import {NavLink} from 'react-router-dom';
 
+const DialogItem = (props) =>{
+    return(
+        <div classes={classes.dialog}>
+            <NavLink to={'/dialogs/'+props.id} activeClassName={classes.activeLink}>{props.name}</NavLink>
+        </div>
+    )
+}
+const Message =(props)=>{
+    return(
+        <div className={classes.message}>{props.message}</div>
+    )
+}
 
 const Dialogs = (props) =>{
     return(
         <div className={classes.dialogs}>
             <div className={classes.dialogsItem}>
-                <div classes={classes.dialog}>
-                    <NavLink to='/dialogs/1' activeClassName={classes.activeLink}>Alex</NavLink>
-                </div>
-                <div classes={classes.dialog}>
-                <NavLink to='/dialogs/2' activeClassName={classes.activeLink}>Elena</NavLink>
-                </div>
-                <div classes={classes.dialog}>
-                <NavLink to='/dialogs/3' activeClassName={classes.activeLink}>Dima</NavLink>
-                </div>
-                <div classes={classes.dialog}>
-                <NavLink to='/dialogs/4' activeClassName={classes.activeLink}>Andrew</NavLink>
-                </div>
-                <div classes={classes.dialog}>
-                <NavLink to='/dialogs/5' activeClassName={classes.activeLink}>Olga</NavLink>
-                </div>
+                <DialogItem name='Alex' id='1' />
+                <DialogItem name='Elena' id='2' />
+                <DialogItem name='Dima' id='3' />
+                <DialogItem name='Andrew' id='4' />
+                <DialogItem name='Olga' id='5' />
+                
             </div>
             <div className={classes.messages}>
-                <div className={classes.message}>Hi!</div>
-                <div className={classes.message}>How are you?</div>
-                <div className={classes.message}>I am fine!</div>
+                <Message message='Hi!' />
+                <Message message='How are you?' />
+                <Message message='I am fine!' />
+                
             </div>
         </div>
 
