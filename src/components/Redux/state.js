@@ -22,4 +22,14 @@ let state ={
              ]
             }
         }
+
+export let addPost = (postMessage) =>{
+        let newPost = {
+                id: 5,
+                message: 'Good!',
+                likeCount: 100
+        };
+        state.profilePage.postMessage.push(newPost);
+};
+
 export default state;
