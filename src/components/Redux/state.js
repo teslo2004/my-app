@@ -1,3 +1,4 @@
+import { rerender } from "../../rerander";
 
 
 
@@ -19,17 +20,24 @@ let state ={
              {id: '2', message:'Hi, how are you', likeCount:'4'},
              {id: '3', message:'I am fine!', likeCount:'7'},
              {id: '4', message:'Do not worry!', likeCount:'1'}
-             ]
+             ],
+    newPostText: 'it-com'
             }
         }
 
 export let addPost = (postMessage) =>{
         let newPost = {
                 id: 5,
-                message: 'Good!',
-                likeCount: 100
+                message: postMessage,
+                likeCount: 0
         };
         state.profilePage.postMessage.push(newPost);
+        rerender(state);
+};
+
+export let updateNewPostText = (newText) =>{
+        state.profilePage.newPostText = newText;
+        rerender(state);
 };
 
 export default state;
