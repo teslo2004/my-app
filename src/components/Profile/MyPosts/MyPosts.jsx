@@ -14,12 +14,20 @@ let addPost = () =>{
     props.addPost(text);
     newPostElement.current.value = '';
 }
+
+let onPostChange = ()=>{
+    let text= newPostElement.current.value;
+    props.updateNewPostText(text);
+    newPostElement.current.value = '';
+}
      return (
         <div className={classes.postBlock}>
            <h3> My posts</h3>
       <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea></div>
+                    <textarea onChange={onPostChange} ref={newPostElement} 
+                    value={props.newPostText} />
+                </div>
                 <div>
                     <button onClick={addPost}>Add post</button>
                 </div>
