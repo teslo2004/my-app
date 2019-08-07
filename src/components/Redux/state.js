@@ -1,7 +1,7 @@
-
-
-
-let state ={
+let rerenderTree = () =>{
+        console.log('State was changed')
+}
+const state ={
     messagesPage:{
         dialogData:[{id:'1', name:'Alex'},
             {id:'2', name:'Elena'},
@@ -23,13 +23,17 @@ let state ={
             }
         }
 
-export let addPost = (postMessage) =>{
+export const addPost = (postMessage) =>{
         let newPost = {
                 id: 5,
-                message: 'Good!',
-                likeCount: 100
+                message: postMessage,
+                likeCount: 0
         };
         state.profilePage.postMessage.push(newPost);
+        rerenderTree(state);
 };
 
+const subscribe = (observer) =>{
+        rerenderTree = observer;
+}
 export default state;

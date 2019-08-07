@@ -12,6 +12,7 @@ let postMessageElements = props.postMessage
 let addPost = () =>{
     let text= newPostElement.current.value;
     props.addPost(text);
+    newPostElement.current.value = '';
 }
      return (
         <div className={classes.postBlock}>
