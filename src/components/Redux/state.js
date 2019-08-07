@@ -18,19 +18,21 @@ let state ={
     postMessage:[{id: '1', message:'Hi, it is my first message', likeCount:'14'},
              {id: '2', message:'Hi, how are you', likeCount:'4'},
              {id: '3', message:'I am fine!', likeCount:'7'},
-             {id: '4', message:'Do not worry!', likeCount:'1'}
+             {id: '4', message:'Do not worry!', likeCount:'11'}
              ],
     newPostText: 'it-com'
             }
         }
+window.state = state;
 
-export const addPost = (postMessage) =>{
+export const addPost = () =>{
         let newPost = {
                 id: 5,
-                message: postMessage,
+                message: state.profilePage.newPostText,
                 likeCount: 0
         };
         state.profilePage.postMessage.push(newPost);
+        state.profilePage.newPostText='';
         rerenderTree(state);
         
 };
