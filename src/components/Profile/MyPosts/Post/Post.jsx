@@ -6,7 +6,7 @@ const Post = (props) => {
         
         
         <div className={classes.item}>
-            <img src='http://www.hitroe.com/attachment/news_avatar-bloody-angel/avatar.jpg' />
+            <img src='http://www.hitroe.com/attachment/news_avatar-bloody-angel/avatar.jpg' alt='post' />
             {props.message}
             <div>
                 <span>like {props.likeCount}</span>

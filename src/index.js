@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import  {subscribe} from './components/Redux/state';
