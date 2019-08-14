@@ -18,7 +18,9 @@ ReactDOM.render(
     </BrowserRouter>  ,
     document.getElementById('root')
 )};
+
 rerenderTree(store.getState());
+
 store.subscribe(()=>{
     let state = store.getState();
     rerenderTree(state);
