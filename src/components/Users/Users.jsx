@@ -22,7 +22,7 @@ let Users = (props) =>{
                  props.users.map(u => <div key={u.id}>
                      <span>
                          <div>
-                             <NavLink to={'/profile' + u.id}>
+                             <NavLink to={'/profile/' + u.id}>
                                  <img alt="" src={u.photos.small != null ? u.photos.small : userPhoto} className={styles.userPhoto} />
                              </NavLink>
                          </div>
