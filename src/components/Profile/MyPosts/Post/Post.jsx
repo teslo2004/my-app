@@ -6,7 +6,7 @@ const Post = (props) => {
         
         
         <div className={classes.item}>
-            <img src='http://www.hitroe.com/attachment/news_avatar-bloody-angel/avatar.jpg' alt='post' />
+            <img src='https://wpjournalist.nl/wp-content/uploads/2019/03/avatar-jongen-voorbeeld-1.jpg' alt='post' />
             {props.message}
             <div>
                 <span>like {props.likeCount}</span>
